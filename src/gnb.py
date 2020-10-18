@@ -1,6 +1,7 @@
 import pandas as pd
 
 from utils import data
+from utils import metrics
 from sklearn.naive_bayes import GaussianNB
 
 # Training
@@ -12,4 +13,5 @@ clf.fit(trainX, trainY)
 testX, testY = data.load_data('test_with_label_1.csv')
 predictions = pd.DataFrame(clf.predict(testX))
 data.generate_csv(predictions, 'GNB-DS1.csv')
+metrics.compute(predictions, testY, 'GNB-DS1.csv')
 data.generate_cm(predictions, testY, 'GNB-DS1.png')
