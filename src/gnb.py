@@ -12,5 +12,4 @@ clf.fit(trainX, trainY)
 testX, testY = data.load_data('test_with_label_1.csv')
 predictions = pd.DataFrame(clf.predict(testX))
 data.generate_csv(predictions, 'GNB-DS1.csv')
-
-
+data.generate_cm(predictions, testY, 'GNB-DS1.png')
