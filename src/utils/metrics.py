@@ -59,7 +59,7 @@ def compute(pred: pd.DataFrame, true: pd.Series, filename: str) -> None:
     metrics = generate_metrics(pd.Series(pred.iloc[:, 0]).tolist(), true.tolist(), alphabet_size)
     csv_path = Path.cwd().parent / 'output' / 'csv' / filename
     if csv_path.exists():
-        with open(csv_path, 'a') as f:
+        with open(csv_path, 'a', newline='') as f:
             writer = csv.writer(f)
             writer.writerows(metrics)
 
