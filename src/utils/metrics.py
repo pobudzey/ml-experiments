@@ -9,7 +9,7 @@ def generate_metrics(pred: List[int], true: List[int], size: int) -> List[List[i
     metrics = []
     class_count = [0 for x in range(size)]
 
-    # Precision, recall and f1 for each class
+    # Precision, recall and f1-measure for each class
     for letter in range(size):
         tp = fp = fn = 0
         precision = recall = f1 = 0.0
@@ -62,10 +62,3 @@ def compute(pred: pd.DataFrame, true: pd.Series, filename: str) -> None:
         with open(csv_path, 'a', newline='') as f:
             writer = csv.writer(f)
             writer.writerows(metrics)
-
-
-
-
-
-
-
