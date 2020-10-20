@@ -1,5 +1,5 @@
 # ml-experiments
-Experiments with various machine learning models for the classification of Latin and Greek letters
+Experiments with various machine learning models for the classification of Latin and Greek letters  
 https://github.com/pobudzey/ml-experiments
 
 # Instructions
@@ -9,5 +9,5 @@ https://github.com/pobudzey/ml-experiments
 `pip install -r requirements.txt`
 
 2. Run the model of your choice
-`cd src`
+`cd src`  
 `python gnb.py`
