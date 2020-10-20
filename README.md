@@ -10,4 +10,4 @@ https://github.com/pobudzey/ml-experiments
 
 2. Run the model of your choice  
 `cd src`  
-`python gnb.py`
+`python <model>.py`
